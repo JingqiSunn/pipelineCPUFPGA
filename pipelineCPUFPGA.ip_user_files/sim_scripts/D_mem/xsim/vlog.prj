@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../pipelineCPUFPGA.gen/sources_1/ip/D_mem/sim/D_mem.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

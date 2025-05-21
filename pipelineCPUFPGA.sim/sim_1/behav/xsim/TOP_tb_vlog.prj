@@ -1,0 +1,29 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../pipelineCPUFPGA.gen/sources_1/ip/D_mem/sim/D_mem.v" \
+"../../../../pipelineCPUFPGA.ip_user_files/ip/I_mem/sim/I_mem.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/ALU.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/ALU_MEM.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/BEFORE_IF.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/ID.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/ID_ALU.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/IF.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/IF_ID.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/IM.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/MEM.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/MEM_WB.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/TOP.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/Tool_clock_divider.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/WB.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/bonetime.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/debounce.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/main.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/scan_seg.v" \
+"../../../../pipelineCPUFPGA.srcs/sources_1/new/seven_seg_map.v" \
+"../../../../pipelineCPUFPGA.srcs/sim_1/new/TOP_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

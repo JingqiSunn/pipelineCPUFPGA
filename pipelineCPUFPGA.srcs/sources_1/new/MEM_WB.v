@@ -23,8 +23,8 @@ module MEM_WB(
         end
     end
     always @(*) begin
-        inst_index_next <= inst_index;
-        ALU_MEM_result_next <= ALU_MEM_result;
-        rd_index_next <= rd_index;
+        inst_index_next = inst_index;
+        ALU_MEM_result_next = ALU_MEM_result;
+        rd_index_next = rd_index;
     end
 endmodule

@@ -120,7 +120,7 @@ module ID(
                     reg_status_next[((rd-1)*3) +: 3] = 3'b001;
                 end
             end
-            17'b1101111_???????_???: begin
+            17'b1101111_???????_???: begin // J-type
                 if (rd != 5'b0 && stall == 1'b0) begin
                     reg_status_next[((rd-1)*3) +: 3] = 3'b001;
                 end

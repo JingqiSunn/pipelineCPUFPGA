@@ -14,7 +14,7 @@ module IF(
     );
 
     // determine the pc_out
-    always @(posedge clk) begin
+    always @(*) begin
         pc_out <= pc;
     end
 endmodule

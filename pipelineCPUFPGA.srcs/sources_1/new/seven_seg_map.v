@@ -62,6 +62,7 @@ module seven_seg_map(input [5:0]sw, output reg [7:0] seg_out,output [7:0] seg_en
        6'b100011: seg_out = 8'b11011010; // Z
        6'b100100: seg_out = 8'b00000001; //.dp
        6'b100101: seg_out = 8'b00000000; //.empty
+       6'b100110: seg_out = 8'b00000010; // -
        default:   seg_out = 8'b00000000; // empty
     endcase
     

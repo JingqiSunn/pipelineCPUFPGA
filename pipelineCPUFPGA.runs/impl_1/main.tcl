@@ -120,8 +120,8 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.runs/synth_1/main.dcp
-  read_ip -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/I_mem/I_mem.xci
   read_ip -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/D_mem/D_mem.xci
+  read_ip -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/I_mem/I_mem.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/constrs_1/new/cons.xdc
 OPTRACE "read constraints: implementation" END { }

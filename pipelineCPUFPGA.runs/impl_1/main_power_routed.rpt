@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date             : Wed May 21 14:05:09 2025
+| Date             : Thu May 22 21:40:51 2025
 | Host             : PC running 64-bit Ubuntu 24.04.1 LTS
 | Command          : report_power -file main_power_routed.rpt -pb main_power_summary_routed.pb -rpx main_power_routed.rpx
 | Design           : main
@@ -29,20 +29,20 @@ Table of Contents
 1. Summary
 ----------
 
-+--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 81.500 (Junction temp exceeded!) |
-| Design Power Budget (W)  | Unspecified*                     |
-| Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 80.995                           |
-| Device Static (W)        | 0.505                            |
-| Effective TJA (C/W)      | 4.8                              |
-| Max Ambient (C)          | 0.0                              |
-| Junction Temperature (C) | 125.0                            |
-| Confidence Level         | Low                              |
-| Setting File             | ---                              |
-| Simulation Activity File | ---                              |
-| Design Nets Matched      | NA                               |
-+--------------------------+----------------------------------+
++--------------------------+-----------------------------------+
+| Total On-Chip Power (W)  | 113.476 (Junction temp exceeded!) |
+| Design Power Budget (W)  | Unspecified*                      |
+| Power Budget Margin (W)  | NA                                |
+| Dynamic (W)              | 112.971                           |
+| Device Static (W)        | 0.505                             |
+| Effective TJA (C/W)      | 4.8                               |
+| Max Ambient (C)          | 0.0                               |
+| Junction Temperature (C) | 125.0                             |
+| Confidence Level         | Low                               |
+| Setting File             | ---                               |
+| Simulation Activity File | ---                               |
+| Design Nets Matched      | NA                                |
++--------------------------+-----------------------------------+
 * Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
 
 
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |    28.988 |    10388 |       --- |             --- |
-|   LUT as Logic |    27.341 |     6806 |     20800 |           32.72 |
-|   CARRY4       |     1.454 |      682 |      8150 |            8.37 |
-|   Register     |     0.146 |     1566 |     41600 |            3.76 |
+| Slice Logic    |    45.549 |    14633 |       --- |             --- |
+|   LUT as Logic |    42.725 |    10387 |     20800 |           49.94 |
+|   CARRY4       |     2.646 |     1208 |      8150 |           14.82 |
+|   Register     |     0.130 |     1534 |     41600 |            3.69 |
 |   F7/F8 Muxes  |     0.039 |       42 |     32600 |            0.13 |
 |   BUFG         |     0.009 |        2 |        32 |            6.25 |
-|   Others       |     0.000 |      105 |       --- |             --- |
-| Signals        |    27.595 |     9086 |       --- |             --- |
+|   Others       |     0.000 |      103 |       --- |             --- |
+| Signals        |    43.205 |    12686 |       --- |             --- |
 | Block RAM      |     0.626 |     30.5 |        50 |           61.00 |
-| I/O            |    23.787 |       54 |       210 |           25.71 |
+| I/O            |    23.591 |       54 |       210 |           25.71 |
 | Static Power   |     0.505 |          |           |                 |
-| Total          |    81.500 |          |           |                 |
+| Total          |   113.476 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    57.556 |      57.206 |      0.350 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.923 |       0.870 |      0.053 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     6.719 |       6.718 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    89.728 |      89.378 |      0.350 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.916 |       0.863 |      0.053 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     6.663 |       6.662 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -140,24 +140,24 @@ Table of Contents
 +-----------------+-----------+
 | Name            | Power (W) |
 +-----------------+-----------+
-| main            |    80.995 |
-|   clk_divider   |     0.073 |
-|   debounce_R15  |     0.314 |
-|   im            |    10.576 |
-|     scan_seg_1  |     0.691 |
-|   top           |    46.046 |
-|     alu_0       |     0.681 |
-|     alu_mem_0   |     0.282 |
-|     before_if_0 |     0.460 |
-|     id_0        |     1.209 |
-|     id_alu_0    |     2.711 |
-|     if_0        |     1.344 |
-|       imem      |     1.043 |
-|     if_id_0     |    11.035 |
-|     mem         |     0.276 |
-|       dmem      |     0.276 |
-|     mem_wb_0    |    28.038 |
-|     wb_0        |     0.009 |
+| main            |   112.971 |
+|   clk_divider   |     0.074 |
+|   debounce_R15  |     0.402 |
+|   im            |     0.712 |
+|     scan_seg_1  |     0.712 |
+|   top           |    88.038 |
+|     alu_0       |     0.686 |
+|     alu_mem_0   |     0.257 |
+|     before_if_0 |     0.703 |
+|     id_0        |     1.364 |
+|     id_alu_0    |     2.746 |
+|     if_0        |     1.203 |
+|       imem      |     1.040 |
+|     if_id_0     |    11.167 |
+|     mem         |     0.290 |
+|       dmem      |     0.290 |
+|     mem_wb_0    |    69.611 |
+|     wb_0        |     0.012 |
 +-----------------+-----------+
 
 

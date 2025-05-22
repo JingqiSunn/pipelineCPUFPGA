@@ -130,10 +130,12 @@ module IM(
     // 6'b100011: seg_out = 8'b11011010; // Z
     // 6'b100100: seg_out = 8'b00000001; //.dp
     // 6'b100101: seg_out = 8'b00000000; //.empty
+    // 6'b100110: seg_out = 8'b00000000; // -
     // default:   seg_out = 8'b00000000; // empty
     // determine the value of content_7 to content_0
     reg [5:0] content_7, content_6, content_5, content_4;
     reg [5:0] content_3, content_2, content_1, content_0;
+    reg [31:0] data_to_display;
     always @(*) begin
         case (x17)
             32'h00000003: begin // output(hex)
@@ -195,6 +197,46 @@ module IM(
                 content_2 = 6'b001011; 
                 content_1 = 6'b100101; 
                 content_0 = 6'b000100; 
+            end
+            32'h00000008: begin // output(signed decimal)
+                if (x10[31] == 1'b1) begin 
+                    data_to_display = ~x10 + 1;
+                    content_0 = 6'b100110; 
+                end else begin
+                    data_to_display = x10;
+                    content_0 = 6'b100101; 
+                end
+                content_7 = data_to_display % 10; 
+                if (data_to_display / 10 % 10 == 0) begin
+                    content_6 = 6'b100101; 
+                end else begin
+                    content_6 = (data_to_display / 10) % 10; 
+                end
+                if (data_to_display / 100 % 10 == 0) begin
+                    content_5 = 6'b100101; 
+                end else begin
+                    content_5 = (data_to_display / 100) % 10; 
+                end
+                if (data_to_display / 1000 % 10 == 0) begin
+                    content_4 = 6'b100101; 
+                end else begin
+                    content_4 = (data_to_display / 1000) % 10; 
+                end
+                if (data_to_display / 10000 % 10 == 0) begin
+                    content_3 = 6'b100101; 
+                end else begin
+                    content_3 = (data_to_display / 10000) % 10; 
+                end
+                if (data_to_display / 100000 % 10 == 0) begin
+                    content_2 = 6'b100101; 
+                end else begin
+                    content_2 = (data_to_display / 100000) % 10; 
+                end
+                if (data_to_display / 1000000 % 10 == 0) begin
+                    content_1 = 6'b100101; 
+                end else begin
+                    content_1 = (data_to_display / 1000000) % 10; 
+                end
             end
             default: begin
                 content_7 = 6'b100101;

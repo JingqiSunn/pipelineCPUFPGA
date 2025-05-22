@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu May 22 20:00:23 2025
+# Process ID: 213895
+# Current directory: /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.runs/synth_1
+# Command line: vivado -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
+# Log file: /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.runs/synth_1/main.vds
+# Journal file: /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.runs/synth_1/vivado.jou
+# Running On        :PC
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 24.04.1 LTS
+# Processor Detail  :13th Gen Intel(R) Core(TM) i9-13900HX
+# CPU Frequency     :800.783 MHz
+# CPU Physical cores:24
+# CPU Logical cores :32
+# Host memory       :33442 MB
+# Swap memory       :8589 MB
+# Total Virtual     :42032 MB
+# Available Virtual :35764 MB
+#-----------------------------------------------------------
+source main.tcl -notrace

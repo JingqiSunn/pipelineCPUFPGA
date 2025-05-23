@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="I_mem_synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1747915168">
+<GenRun Id="I_mem_synth_1" LaunchPart="xc7a35tcsg324-1" LaunchTime="1747966892">
+  <File Type="VDS-TIMINGSUMMARY" Name="I_mem_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="I_mem.dcp"/>
   <File Type="RDS-UTIL-PB" Name="I_mem_utilization_synth.pb"/>
-  <File Type="PA-TCL" Name="I_mem.tcl"/>
   <File Type="RDS-UTIL" Name="I_mem_utilization_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="I_mem_reports.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="I_mem_drc_synth.rpt"/>
   <File Type="RDS-RDS" Name="I_mem.vds"/>
+  <File Type="REPORTS-TCL" Name="I_mem_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="I_mem_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="I_mem.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/I_mem" RelGenDir="$PGENDIR/I_mem">
     <File Path="$PSRCDIR/sources_1/ip/I_mem/I_mem.xci">
       <FileInfo>

@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="585.501 ns"></ZoomEndTime>
-      <Cursor1Time time="1,146.000 ns"></Cursor1Time>
+      <ZoomEndTime time="1,175.001 ns"></ZoomEndTime>
+      <Cursor1Time time="522.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="345"></NameColumnWidth>
-      <ValueColumnWidth column_width="83"></ValueColumnWidth>
+      <ValueColumnWidth column_width="79"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="14" />
    <wvobject type="group" fp_name="group1121">
@@ -523,6 +523,11 @@
    <wvobject type="group" fp_name="group16621">
       <obj_property name="label">register_next</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/TOP_tb/top1_inst/top/id_0/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
       <wvobject type="vbus" fp_name="vbus15564">
          <obj_property name="label">X0</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -4835,6 +4840,7 @@
    <wvobject type="group" fp_name="group1265">
       <obj_property name="label">IF_ID</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/TOP_tb/top1_inst/top/if_id_0/rst">
          <obj_property name="ElementShortName">rst</obj_property>
          <obj_property name="ObjectShortName">rst</obj_property>
@@ -14461,6 +14467,7 @@
       <obj_property name="label">PC_stuck</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/TOP_tb/top1_inst/K1">
          <obj_property name="ElementShortName">K1</obj_property>
          <obj_property name="ObjectShortName">K1</obj_property>

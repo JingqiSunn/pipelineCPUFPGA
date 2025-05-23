@@ -13,11 +13,11 @@ module BEFORE_IF(
             pc_out = 32'b0;
         end
         else begin 
-            if (stall) begin
-                pc_out = pc_out;
-            end
-            else if (branch) begin
+            if (branch) begin
                 pc_out = ALU_pc;
+            end
+            else if (stall) begin
+                pc_out = pc_out;
             end
             else begin
                 pc_out = pc_next;

@@ -14,12 +14,12 @@ module IF_ID(
         if (!rst) begin
             inst_out <= 32'b0;
             pc_out <= 32'b0;
-        end else if (stall) begin
-            inst_out <=  inst_out;
-            pc_out <= pc_out;
         end else if (branch) begin
             inst_out <= 32'b0;
             pc_out <= 32'b0;
+        end else if (stall) begin
+            inst_out <=  inst_out;
+            pc_out <= pc_out;
         end else begin
             inst_out <= next_inst;
             pc_out <= next_pc;

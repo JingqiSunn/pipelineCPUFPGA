@@ -33,7 +33,7 @@ module ID_ALU(
             rd_index_out <= 5'b00000;
             pc_out <= 32'b0;
         end
-        else if (stall) begin
+        else if (branch) begin
             inst_index_out <= 6'b111111;
             read_data_1_out <= 32'b0;
             read_data_2_out <= 32'b0;
@@ -41,7 +41,7 @@ module ID_ALU(
             rd_index_out <= 5'b00000;
             pc_out <= 32'b0;
         end
-        else if (branch) begin
+        else if (stall) begin
             inst_index_out <= 6'b111111;
             read_data_1_out <= 32'b0;
             read_data_2_out <= 32'b0;

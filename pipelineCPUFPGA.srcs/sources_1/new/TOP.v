@@ -99,7 +99,8 @@ ID id_0(
     //input
     .clk(clk),
     .rst(rst),
-     .done(done),
+    .branch(branch),
+    .done(done),
     .inst(IF_ID_ID_inst),
     .regs(regs),
     .pc(IF_ID_ID_pc),

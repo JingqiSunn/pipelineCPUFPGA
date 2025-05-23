@@ -3,8 +3,8 @@
 # SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
 # IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
 # SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-# Start of session at: Fri May 23 10:21:34 2025
-# Process ID: 6376
+# Start of session at: Fri May 23 13:53:27 2025
+# Process ID: 93878
 # Current directory: /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.runs/I_mem_synth_1
 # Command line: vivado -log I_mem.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source I_mem.tcl
 # Log file: /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.runs/I_mem_synth_1/I_mem.vds
@@ -13,12 +13,12 @@
 # Platform          :Ubuntu
 # Operating System  :Ubuntu 24.04.1 LTS
 # Processor Detail  :13th Gen Intel(R) Core(TM) i9-13900HX
-# CPU Frequency     :800.000 MHz
+# CPU Frequency     :1046.578 MHz
 # CPU Physical cores:24
 # CPU Logical cores :32
 # Host memory       :33442 MB
 # Swap memory       :8589 MB
 # Total Virtual     :42032 MB
-# Available Virtual :38717 MB
+# Available Virtual :36574 MB
 #-----------------------------------------------------------
 source I_mem.tcl -notrace

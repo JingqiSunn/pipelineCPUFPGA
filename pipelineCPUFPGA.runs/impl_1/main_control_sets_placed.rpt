@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Thu May 22 21:40:33 2025
+| Date         : Fri May 23 13:55:32 2025
 | Host         : PC running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -59,10 +59,10 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              10 |            7 |
-| No           | No                    | Yes                    |            1386 |          660 |
+| No           | No                    | Yes                    |            1386 |          612 |
 | No           | Yes                   | No                     |               5 |            2 |
-| Yes          | No                    | No                     |               9 |            3 |
-| Yes          | No                    | Yes                    |             112 |           37 |
+| Yes          | No                    | No                     |               9 |            4 |
+| Yes          | No                    | Yes                    |             112 |           36 |
 | Yes          | Yes                   | No                     |              12 |            5 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,21 +70,21 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
-|          Clock Signal         |            Enable Signal           |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
-+-------------------------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
-|  im/scan_seg_1/clkout_reg_n_0 |                                    | top/wb_0/rst                       |                1 |              3 |         3.00 |
-|  clk_IBUF_BUFG                |                                    |                                    |                2 |              3 |         1.50 |
-|  cpu_clk_40_BUFG              |                                    |                                    |                2 |              3 |         1.50 |
-|  cpu_clk_40_BUFG              | top/mem_wb_0/rd_index_out_reg[0]_0 | top/wb_0/rst                       |                4 |              4 |         1.00 |
-| ~cpu_clk_40_BUFG              |                                    |                                    |                3 |              4 |         1.33 |
-|  top/if_id_0/E[0]             |                                    | top/mem_wb_0/AR[0]                 |                2 |              5 |         2.50 |
-|  cpu_clk_40_BUFG              | top/mem_wb_0/rd_index_out_reg[3]_0 | top/wb_0/rst                       |                4 |              7 |         1.75 |
-|  clk_IBUF_BUFG                | debounce_R15/delay_cnt[20]_i_2_n_0 |                                    |                3 |              9 |         3.00 |
-|  clk_IBUF_BUFG                | debounce_R15/delay_cnt[20]_i_2_n_0 | debounce_R15/delay_cnt[20]_i_1_n_0 |                5 |             12 |         2.40 |
-|  clk_IBUF_BUFG                |                                    | top/wb_0/rst                       |               12 |             38 |         3.17 |
-|  cpu_clk_40_BUFG              | top/id_0/reg_status_reg[50]_2      | top/wb_0/rst                       |               29 |            101 |         3.48 |
-|  cpu_clk_40_BUFG              |                                    | top/wb_0/rst                       |              647 |           1345 |         2.08 |
-+-------------------------------+------------------------------------+------------------------------------+------------------+----------------+--------------+
++-------------------------------+--------------------------------------+------------------------------------+------------------+----------------+--------------+
+|          Clock Signal         |             Enable Signal            |          Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------+--------------------------------------+------------------------------------+------------------+----------------+--------------+
+|  im/scan_seg_1/clkout_reg_n_0 |                                      | top/wb_0/rst                       |                2 |              3 |         1.50 |
+|  clk_IBUF_BUFG                |                                      |                                    |                2 |              3 |         1.50 |
+|  cpu_clk_40_BUFG              |                                      |                                    |                3 |              3 |         1.00 |
+|  cpu_clk_40_BUFG              | top/mem_wb_0/rd_index_out_reg[0]_0   | top/wb_0/rst                       |                4 |              4 |         1.00 |
+| ~cpu_clk_40_BUFG              |                                      |                                    |                2 |              4 |         2.00 |
+|  top/if_id_0/E[0]             |                                      | top/mem_wb_0/AR[0]                 |                2 |              5 |         2.50 |
+|  cpu_clk_40_BUFG              | top/mem_wb_0/rd_index_out_reg[3]_0   | top/wb_0/rst                       |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG                | debounce_R15/delay_cnt[20]_i_2_n_0   |                                    |                4 |              9 |         2.25 |
+|  clk_IBUF_BUFG                | debounce_R15/delay_cnt[20]_i_2_n_0   | debounce_R15/delay_cnt[20]_i_1_n_0 |                5 |             12 |         2.40 |
+|  clk_IBUF_BUFG                |                                      | top/wb_0/rst                       |               13 |             38 |         2.92 |
+|  cpu_clk_40_BUFG              | top/id_alu_0/inst_index_out_reg[2]_1 | top/wb_0/rst                       |               28 |            101 |         3.61 |
+|  cpu_clk_40_BUFG              |                                      | top/wb_0/rst                       |              597 |           1345 |         2.25 |
++-------------------------------+--------------------------------------+------------------------------------+------------------+----------------+--------------+
 
 

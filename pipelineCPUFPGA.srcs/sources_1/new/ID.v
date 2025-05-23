@@ -1,6 +1,7 @@
 module ID(
     input wire clk,
     input wire rst,
+    input wire branch,
     input wire done,
     input wire [31:0] inst,
     input wire [32*32-1:0] regs,
@@ -91,48 +92,48 @@ module ID(
         end
         casez(opcode_funct7_funct3)
             17'b0110011_???????_???: begin // R-type
-                if (rd != 5'b0 && stall == 1'b0) begin
+                if (rd != 5'b0 && stall == 1'b0 && branch == 1'b0) begin
                     reg_status_next[((rd-1)*3) +: 3] = 3'b001;
                 end
             end
             17'b0010011_???????_???: begin // I-type
-                if (rd != 5'b0 && stall == 1'b0) begin
+                if (rd != 5'b0 && stall == 1'b0 && branch == 1'b0) begin
                     reg_status_next[((rd-1)*3) +: 3] = 3'b001;
                 end
             end
             17'b0000011_???????_???: begin // I-type
-                if (rd != 5'b0 && stall == 1'b0) begin
+                if (rd != 5'b0 && stall == 1'b0 && branch == 1'b0) begin
                     reg_status_next[((rd-1)*3) +: 3] = 3'b101;
                 end
             end  
             17'b1100111_???????_???: begin // I-type
-                if (rd != 5'b0 && stall == 1'b0) begin
+                if (rd != 5'b0 && stall == 1'b0 && branch == 1'b0) begin
                     reg_status_next[((rd-1)*3) +: 3] = 3'b001;
                 end
             end
             17'b0110111_???????_???: begin // U-type
-                if (rd != 5'b0 && stall == 1'b0) begin
+                if (rd != 5'b0 && stall == 1'b0 && branch == 1'b0) begin
                     reg_status_next[((rd-1)*3) +: 3] = 3'b001;
                 end
             end
             17'b0010111_???????_???: begin // U-type
-                if (rd != 5'b0 && stall == 1'b0) begin
+                if (rd != 5'b0 && stall == 1'b0 && branch == 1'b0) begin
                     reg_status_next[((rd-1)*3) +: 3] = 3'b001;
                 end
             end
             17'b1101111_???????_???: begin // J-type
-                if (rd != 5'b0 && stall == 1'b0) begin
+                if (rd != 5'b0 && stall == 1'b0 && branch == 1'b0) begin
                     reg_status_next[((rd-1)*3) +: 3] = 3'b001;
                 end
             end
         endcase 
-        if (ecall == 1'b1 && stall == 1'b0 && x_17_reg_data == 32'h00000001) begin
+        if (ecall == 1'b1 && stall == 1'b0 && x_17_reg_data == 32'h00000001 && branch == 1'b0) begin
             reg_status_next[9*3 +: 3] = 3'b001;
-        end else if (ecall == 1'b1 && stall == 1'b0 && x_17_reg_data == 32'h00000002) begin
+        end else if (ecall == 1'b1 && stall == 1'b0 && x_17_reg_data == 32'h00000002 && branch == 1'b0) begin
             reg_status_next[9*3 +: 3] = 3'b001;
-        end else if (ecall == 1'b1 && stall == 1'b0 && x_17_reg_data == 32'h00000006) begin
+        end else if (ecall == 1'b1 && stall == 1'b0 && x_17_reg_data == 32'h00000006 && branch == 1'b0) begin
             reg_status_next[9*3 +: 3] = 3'b001;
-        end else if (ecall == 1'b1 && stall == 1'b0 && x_17_reg_data == 32'h00000007) begin
+        end else if (ecall == 1'b1 && stall == 1'b0 && x_17_reg_data == 32'h00000007 && branch == 1'b0) begin
             reg_status_next[9*3 +: 3] = 3'b001;
         end 
     end

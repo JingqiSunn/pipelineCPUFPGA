@@ -11,18 +11,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,175.001 ns"></ZoomEndTime>
-      <Cursor1Time time="522.000 ns"></Cursor1Time>
+      <ZoomStartTime time="1,971.084 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,564.585 ns"></ZoomEndTime>
+      <Cursor1Time time="2,134.584 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="345"></NameColumnWidth>
-      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+      <ValueColumnWidth column_width="67"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="14" />
    <wvobject type="group" fp_name="group1121">
       <obj_property name="label">registers_status</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="vbus" fp_name="vbus1122">
          <obj_property name="label">X1</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -4788,6 +4789,7 @@
    <wvobject type="group" fp_name="group1259">
       <obj_property name="label">BEFORE_IF</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/TOP_tb/top1_inst/top/before_if_0/clk">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
@@ -4820,6 +4822,7 @@
    <wvobject type="group" fp_name="group1260">
       <obj_property name="label">IF</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/TOP_tb/top1_inst/top/if_0/clk">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
@@ -4902,10 +4905,6 @@
          <obj_property name="ElementShortName">inst[31:0]</obj_property>
          <obj_property name="ObjectShortName">inst[31:0]</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/regs">
-         <obj_property name="ElementShortName">regs[1023:0]</obj_property>
-         <obj_property name="ObjectShortName">regs[1023:0]</obj_property>
-      </wvobject>
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/pc">
          <obj_property name="ElementShortName">pc[31:0]</obj_property>
          <obj_property name="ObjectShortName">pc[31:0]</obj_property>
@@ -4913,10 +4912,12 @@
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/ALU_result">
          <obj_property name="ElementShortName">ALU_result[31:0]</obj_property>
          <obj_property name="ObjectShortName">ALU_result[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/ALU_MEM_result">
          <obj_property name="ElementShortName">ALU_MEM_result[31:0]</obj_property>
          <obj_property name="ObjectShortName">ALU_MEM_result[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/data">
          <obj_property name="ElementShortName">data[31:0]</obj_property>
@@ -5433,10 +5434,12 @@
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/inst_index">
          <obj_property name="ElementShortName">inst_index[5:0]</obj_property>
          <obj_property name="ObjectShortName">inst_index[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/read_data_1">
          <obj_property name="ElementShortName">read_data_1[31:0]</obj_property>
          <obj_property name="ObjectShortName">read_data_1[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/read_data_2">
          <obj_property name="ElementShortName">read_data_2[31:0]</obj_property>
@@ -5449,6 +5452,7 @@
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/rd_index">
          <obj_property name="ElementShortName">rd_index[4:0]</obj_property>
          <obj_property name="ObjectShortName">rd_index[4:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/pc_out">
          <obj_property name="ElementShortName">pc_out[31:0]</obj_property>
@@ -5473,6 +5477,7 @@
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/rs2">
          <obj_property name="ElementShortName">rs2[4:0]</obj_property>
          <obj_property name="ObjectShortName">rs2[4:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/id_0/rd">
          <obj_property name="ElementShortName">rd[4:0]</obj_property>
@@ -5502,6 +5507,7 @@
    <wvobject type="group" fp_name="group1432">
       <obj_property name="label">ID_ALU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/TOP_tb/top1_inst/top/id_alu_0/clk">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
@@ -5594,9 +5600,11 @@
    <wvobject type="group" fp_name="group1455">
       <obj_property name="label">ALU</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/alu_0/inst_index">
          <obj_property name="ElementShortName">inst_index[5:0]</obj_property>
          <obj_property name="ObjectShortName">inst_index[5:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/TOP_tb/top1_inst/top/alu_0/read_data_1">
          <obj_property name="ElementShortName">read_data_1[31:0]</obj_property>

@@ -91,19 +91,19 @@ read_verilog -library xil_defaultlib {
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/MEM.v
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/MEM_WB.v
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/TOP.v
-  /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/Tool_clock_divider.v
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/WB.v
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/bonetime.v
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/debounce.v
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/scan_seg.v
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/seven_seg_map.v
+  /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/tool_clock_divider_by_2.v
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/main.v
 }
-read_ip -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/D_mem/D_mem.xci
-set_property used_in_implementation false [get_files -all /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.gen/sources_1/ip/D_mem/D_mem_ooc.xdc]
-
 read_ip -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/I_mem/I_mem.xci
 set_property used_in_implementation false [get_files -all /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/I_mem/I_mem_ooc.xdc]
+
+read_ip -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/D_mem/D_mem.xci
+set_property used_in_implementation false [get_files -all /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.gen/sources_1/ip/D_mem/D_mem_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -117,6 +117,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/constrs_1/new/cons.xdc
 set_property used_in_implementation false [get_files /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/constrs_1/new/cons.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/utils_1/imports/synth_1/main.dcp

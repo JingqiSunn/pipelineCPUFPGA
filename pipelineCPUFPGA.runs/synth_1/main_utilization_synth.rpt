@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (lin64) Build 5076996 Wed May 22 18:36:09 MDT 2024
-| Date         : Sun May 25 10:57:32 2025
+| Date         : Sun May 25 15:49:54 2025
 | Host         : PC running 64-bit Ubuntu 24.04.1 LTS
 | Command      : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
 | Design       : main
@@ -34,8 +34,8 @@ Table of Contents
 | Slice LUTs*             | 10358 |     0 |          0 |     20800 | 49.80 |
 |   LUT as Logic          | 10358 |     0 |          0 |     20800 | 49.80 |
 |   LUT as Memory         |     0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |  1525 |     0 |          0 |     41600 |  3.67 |
-|   Register as Flip Flop |  1520 |     0 |          0 |     41600 |  3.65 |
+| Slice Registers         |  1526 |     0 |          0 |     41600 |  3.67 |
+|   Register as Flip Flop |  1521 |     0 |          0 |     41600 |  3.66 |
 |   Register as Latch     |     5 |     0 |          0 |     41600 |  0.01 |
 | F7 Muxes                |    44 |     0 |          0 |     16300 |  0.27 |
 | F8 Muxes                |     1 |     0 |          0 |      8150 |  0.01 |
@@ -58,7 +58,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 24    |          Yes |           - |          Set |
-| 1474  |          Yes |           - |        Reset |
+| 1475  |          Yes |           - |        Reset |
 | 8     |          Yes |         Set |            - |
 | 19    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -115,7 +115,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFGCTRL   |    2 |     0 |          0 |        32 |  6.25 |
 | BUFIO      |    0 |     0 |          0 |        20 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         5 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         5 |  0.00 |
@@ -153,7 +153,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | LUT5     | 1978 |                 LUT |
 | LUT3     | 1792 |                 LUT |
 | LUT4     | 1733 |                 LUT |
-| FDCE     | 1471 |        Flop & Latch |
+| FDCE     | 1472 |        Flop & Latch |
 | CARRY4   | 1208 |          CarryLogic |
 | LUT2     | 1145 |                 LUT |
 | LUT1     |  134 |                 LUT |
@@ -165,8 +165,8 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | FDSE     |    8 |        Flop & Latch |
 | LDCE     |    3 |        Flop & Latch |
 | LDPE     |    2 |        Flop & Latch |
+| BUFG     |    2 |               Clock |
 | MUXF8    |    1 |               MuxFx |
-| BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
 

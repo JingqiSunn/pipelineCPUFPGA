@@ -105,6 +105,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 8
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcsg324-1
@@ -120,8 +121,8 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.runs/synth_1/main.dcp
-  read_ip -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/D_mem/D_mem.xci
   read_ip -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/I_mem/I_mem.xci
+  read_ip -quiet /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/ip/D_mem/D_mem.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/constrs_1/new/cons.xdc
 OPTRACE "read constraints: implementation" END { }

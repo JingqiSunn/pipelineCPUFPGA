@@ -69,7 +69,6 @@ module main(
         .clk_10_out(cpu_clk_100),
         .clk_4_out(cpu_clk_40)
     ); 
-
     // debounce the button
     wire R15_debounced;
     debounce debounce_R15(
@@ -83,7 +82,8 @@ module main(
     // determine the confirm signal
     wire confirm;
     bonetime bonetime_R15(
-        .clk(cpu_clk_40),
+        //.clk(cpu_clk_40),
+        .clk(clk),
         .x_in(R15_debounced),
         .x_pos(confirm)
     );
@@ -99,7 +99,8 @@ module main(
     assign switch_left = {P5, P4, P3, P2, R2, M4, N4, R1};
     assign switch_right = {R3, T3, T5};
     IM im(
-        .clk(cpu_clk_40),
+        //.clk(cpu_clk_40),
+        .clk(clk),
         .clk_original(clk),
         .rst(rst),
         .ecall(ecall),
@@ -148,7 +149,8 @@ module main(
 
     // instantiate the TOP module
     TOP top(
-        .clk(cpu_clk_40),
+        //.clk(cpu_clk_40),
+        .clk(clk),
         .rst(rst),
         .done(done),
         .data(data),

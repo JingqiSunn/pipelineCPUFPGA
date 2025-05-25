@@ -56,8 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 8
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcsg324-1
 
@@ -80,6 +78,7 @@ add_files /home/sjq/Downloads/CPUtests/E_7/E_7_I.coe
 add_files /home/sjq/Downloads/CPUtests/F_1/F_1_I.coe
 add_files /home/sjq/Downloads/CPUtests/F_2/F_2_I.coe
 add_files /home/sjq/Downloads/CPUtests/H_1/H_1_I.coe
+add_files /home/sjq/Downloads/CPUtests/F_4/F_4_I.coe
 read_verilog -library xil_defaultlib {
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/ALU.v
   /home/sjq/Documents/pipelineCPUFPGA/pipelineCPUFPGA.srcs/sources_1/new/ALU_MEM.v
